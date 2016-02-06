@@ -14,7 +14,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -108,20 +111,31 @@ public class MonthlyExpensesFragment extends Fragment {
         expenseList.clear();
 
         SQLiteDatabase db = data.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT " + data.COL_2 + ", " + data.COL_3  + " FROM " + data.TABLE_NAME, null);
+        Cursor cursor = db.rawQuery("SELECT " + data.COL_2 + ", " + data.COL_3 + " FROM " + data.TABLE_NAME, null);
         if (cursor != null) {
             if (cursor.moveToFirst()) {
                 do {
                     String name = cursor.getString(cursor.getColumnIndex(data.COL_2));
                     String expense = cursor.getString(cursor.getColumnIndex(data.COL_3));
-;
-
                     nameList.add(name);
                     expenseList.add(expense);
-
                     monthlyExpensesAdapter.add(name + "\r\nMonthly: " + expense);
                 } while (cursor.moveToNext());
             }
+        }
+
+        double totalExpense = 0;
+        TextView text = (TextView) getActivity().findViewById(R.id.textview_summary);
+
+        for (int i = 0; i < expenseList.size(); i++) {
+            totalExpense += Double.parseDouble(expenseList.get(i));
+        }
+        if (totalExpense > 0) {
+
+            text.setText("Monthly Expenses " + Double.toString(totalExpense));
+        }
+        else {
+            text.setText("Enter expenses");
         }
         cursor.close();
     }
