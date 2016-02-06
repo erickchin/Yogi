@@ -55,4 +55,9 @@ public class MonthlyExpensesDH extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("DELETE FROM " + TABLE_NAME);
     }
+
+    public void changeValue(String name, String value) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("UPDATE " + TABLE_NAME + " SET " + COL_3 + "='" + value + "' WHERE " + COL_2 + "='" + name + "';");
+    }
 }

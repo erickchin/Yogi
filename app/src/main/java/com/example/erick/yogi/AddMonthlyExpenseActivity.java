@@ -59,7 +59,7 @@ public class AddMonthlyExpenseActivity extends AppCompatActivity {
         }
 
         // Check if EditText is empty
-        if (TextUtils.isEmpty(expense)) {
+        if (TextUtils.isEmpty(expense) || Double.parseDouble(expense) < 0) {
             mEditExpenses.setError(getString(R.string.error_field_required));
             focusView = mEditExpenses;
             cancel = true;

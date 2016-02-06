@@ -1,6 +1,8 @@
 package com.example.erick.yogi;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -13,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +30,9 @@ public class MonthlyExpensesFragment extends Fragment {
     private ArrayAdapter<String> monthlyExpensesAdapter;
     ArrayList<String> nameList = new ArrayList<String>();
     ArrayList<String> expenseList = new ArrayList<String>();
+    String value;
+    int positionRow;
+
 
     public MonthlyExpensesFragment() {
 
@@ -65,6 +71,41 @@ public class MonthlyExpensesFragment extends Fragment {
         ListView listView = (ListView) rootView.findViewById(R.id.listview_expenses);
         listView.setAdapter(monthlyExpensesAdapter);
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
+                positionRow = position;
+
+                LayoutInflater li = LayoutInflater.from(getContext());
+                View promptsView = li.inflate(R.layout.edit_expenses, null);
+
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
+                alertDialogBuilder.setView(promptsView);
+
+                final EditText userInput = (EditText) promptsView.findViewById(R.id.editTextNumber);
+
+                // set dialog message
+                alertDialogBuilder.setCancelable(false).setPositiveButton("OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                value = userInput.getText().toString();
+                                data.changeValue(nameList.get(positionRow), value);
+                                getMonthlyExpenses();
+                            }
+                        })
+                 .setNegativeButton("Cancel",
+                         new DialogInterface.OnClickListener() {
+                             public void onClick(DialogInterface dialog, int id) {
+                                 dialog.cancel();
+                             }
+                         });
+                    AlertDialog alertDialog = alertDialogBuilder.create();
+                    alertDialog.show();
+                }
+            });
+
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             public boolean onItemLongClick(AdapterView<?> parent, View v, int position, long id) {
                 data.deleteData(nameList.get(position), expenseList.get(position));
@@ -96,8 +137,8 @@ public class MonthlyExpensesFragment extends Fragment {
         monthlyExpensesAdapter.clear();
         nameList.clear();
         expenseList.clear();
-
         SQLiteDatabase db = data.getReadableDatabase();
+
         Cursor cursor = db.rawQuery("SELECT " + data.COL_2 + ", " + data.COL_3 + " FROM " + data.TABLE_NAME, null);
         if (cursor != null) {
             if (cursor.moveToFirst()) {
