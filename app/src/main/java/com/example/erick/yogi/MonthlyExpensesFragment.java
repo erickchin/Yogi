@@ -22,6 +22,8 @@ public class MonthlyExpensesFragment extends Fragment {
 
     MonthlyExpensesDH data;
     private ArrayAdapter<String> monthlyExpensesAdapter;
+    ArrayList<String> nameList = new ArrayList<String>();
+    ArrayList<String> expenseList = new ArrayList<String>();
 
     public MonthlyExpensesFragment() {
 
@@ -88,16 +90,39 @@ public class MonthlyExpensesFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        getMonthlyExpenses();
     }
 
     @Override
     public void onResume()
     {
         super.onResume();
+        getMonthlyExpenses();
     }
 
     // TODO Get monthly expenses
     private void getMonthlyExpenses() {
+        // Reset all the lists
+        monthlyExpensesAdapter.clear();
+        nameList.clear();
+        expenseList.clear();
 
+        SQLiteDatabase db = data.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT " + data.COL_2 + ", " + data.COL_3  + " FROM " + data.TABLE_NAME, null);
+        if (cursor != null) {
+            if (cursor.moveToFirst()) {
+                do {
+                    String name = cursor.getString(cursor.getColumnIndex(data.COL_2));
+                    String expense = cursor.getString(cursor.getColumnIndex(data.COL_3));
+;
+
+                    nameList.add(name);
+                    expenseList.add(expense);
+
+                    monthlyExpensesAdapter.add(name + "\r\nMonthly: " + expense);
+                } while (cursor.moveToNext());
+            }
+        }
+        cursor.close();
     }
 }
