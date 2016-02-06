@@ -11,6 +11,10 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="Monthly Expenses" />
         <item
+            android:id="@+id/nav_offers"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Offers" />
+        <item
             android:id="@+id/nav_irregular"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Irregular Expenses" />
@@ -24,17 +28,6 @@
             android:title="Tools" />
     </group>
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
-    </item>
+
 
 </menu>
