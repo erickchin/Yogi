@@ -87,8 +87,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
         }
-        else if (id == R.id.nav_irregular) {
-            MonthlyExpensesFragment fragment = new MonthlyExpensesFragment();
+        else if (id == R.id.nav_home) {
+            HomeFragment fragment = new HomeFragment();
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
