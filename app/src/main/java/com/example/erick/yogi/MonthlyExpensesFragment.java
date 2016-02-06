@@ -24,6 +24,8 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
+
+//WHEN U ADD, DELETE, UPDATE
 public class MonthlyExpensesFragment extends Fragment {
 
     MonthlyExpensesDH data;
@@ -160,7 +162,7 @@ public class MonthlyExpensesFragment extends Fragment {
         }
         if (totalExpense > 0) {
 
-            text.setText("Monthly Expenses " + Double.toString(totalExpense));
+            text.setText("Monthly Fee " + Double.toString(totalExpense));
         }
         else {
             text.setText("Enter monthly expenses");

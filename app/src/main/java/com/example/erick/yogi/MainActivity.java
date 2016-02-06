@@ -89,12 +89,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         else if (id == R.id.nav_monthly) {
             MonthlyExpensesFragment fragment = new MonthlyExpensesFragment();
-           FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
         }
         else if (id == R.id.nav_irregular) {
-            MonthlyExpensesFragment fragment = new MonthlyExpensesFragment();
+            /*MonthlyExpensesFragment fragment = new MonthlyExpensesFragment();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.commit();*/
+        }
+        else if (id == R.id.nav_savings) {
+            SavingsFragment fragment = new SavingsFragment();
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
