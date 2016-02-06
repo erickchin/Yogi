@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         // Setup activity fragment to Courses page
-        CoursesFragment fragment = new CoursesFragment();
+        MonthlyExpensesFragment fragment = new MonthlyExpensesFragment();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, fragment);
         fragmentTransaction.commit();
@@ -82,13 +82,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         if (id == R.id.nav_monthly) {
-            CoursesFragment fragment = new CoursesFragment();
+            MonthlyExpensesFragment fragment = new MonthlyExpensesFragment();
            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
         }
         else if (id == R.id.nav_irregular) {
-            GoalFragment fragment = new GoalFragment();
+            MonthlyExpensesFragment fragment = new MonthlyExpensesFragment();
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();

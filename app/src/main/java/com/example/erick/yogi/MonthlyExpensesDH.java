@@ -32,7 +32,7 @@ public class MonthlyExpensesDH extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean insertExpense(String name, double expense) {
+    public boolean insertExpense(String name, String expense) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_2, name);

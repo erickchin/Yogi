@@ -72,7 +72,7 @@ public class AddMonthlyExpenseActivity extends AppCompatActivity {
         } else {
             // Access the database
             mExpenseDH = new MonthlyExpensesDH(AddMonthlyExpenseActivity.this);
-            mExpenseDH.insertExpense(name, Double.parseDouble("expense"));
+            mExpenseDH.insertExpense(name, expense);
             showProgress(true);
             // Pop-up message
             Toast.makeText(AddMonthlyExpenseActivity.this, "Successfully added a course!", Toast.LENGTH_LONG).show();
