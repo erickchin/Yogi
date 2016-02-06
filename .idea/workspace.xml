@@ -15,7 +15,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/erick/yogi/MonthlyExpensesFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/erick/yogi/MonthlyExpensesFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_monthly_expense.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_monthly_expense.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_monthly_expenses.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_monthly_expenses.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -50,18 +49,16 @@
       <file leaf-file-name="MonthlyExpensesFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/erick/yogi/MonthlyExpensesFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8412409">
-              <caret line="137" column="40" selection-start-line="137" selection-start-column="40" selection-end-line="137" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.689781">
+              <caret line="124" column="39" selection-start-line="124" selection-start-column="39" selection-end-line="124" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#825#833#0" expanded="true" />
                 <element signature="e#886#894#0" expanded="true" />
                 <element signature="e#1936#2185#0" expanded="true" />
                 <element signature="e#2184#2185#0" expanded="true" />
-                <element signature="e#2443#3010#0" expanded="true" />
-                <element signature="e#3009#3010#0" expanded="true" />
-                <element signature="e#3058#3497#0" expanded="true" />
-                <element signature="e#3496#3497#0" expanded="true" />
+                <element signature="e#2448#2887#0" expanded="true" />
+                <element signature="e#2886#2887#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,7 +136,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_monthly_expenses.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-5.4310346">
-              <caret line="42" column="44" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+              <caret line="42" column="42" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -1730,8 +1727,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/erick/yogi/AddMonthlyExpenseActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/erick/yogi/MonthlyExpensesDH.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_monthly_expense.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_monthly_expenses.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/erick/yogi/MonthlyExpensesFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_monthly_expenses.xml" />
       </list>
     </option>
   </component>
@@ -2262,7 +2259,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_monthly_expenses.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.4310346">
-          <caret line="42" column="44" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+          <caret line="42" column="42" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -2272,18 +2269,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/erick/yogi/MonthlyExpensesFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8412409">
-          <caret line="137" column="40" selection-start-line="137" selection-start-column="40" selection-end-line="137" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.689781">
+          <caret line="124" column="39" selection-start-line="124" selection-start-column="39" selection-end-line="124" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#825#833#0" expanded="true" />
             <element signature="e#886#894#0" expanded="true" />
             <element signature="e#1936#2185#0" expanded="true" />
             <element signature="e#2184#2185#0" expanded="true" />
-            <element signature="e#2443#3010#0" expanded="true" />
-            <element signature="e#3009#3010#0" expanded="true" />
-            <element signature="e#3058#3497#0" expanded="true" />
-            <element signature="e#3496#3497#0" expanded="true" />
+            <element signature="e#2448#2887#0" expanded="true" />
+            <element signature="e#2886#2887#0" expanded="true" />
           </folding>
         </state>
       </provider>

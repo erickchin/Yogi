@@ -64,25 +64,12 @@ public class MonthlyExpensesFragment extends Fragment {
         // Get a reference to the ListView, and attach this adapter to it.
         ListView listView = (ListView) rootView.findViewById(R.id.listview_expenses);
         listView.setAdapter(monthlyExpensesAdapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-
-                String course = monthlyExpensesAdapter.getItem(position);
-                // Modify expense
-                /*Intent intent = new Intent(getActivity(), OpenCourseActivity.class)
-                        .putExtra("COURSE_CODE", codeList.get(position));
-                intent.putExtra("COURSE_NAME", nameList.get(position));
-                startActivity(intent);*/
-            }
-        });
 
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             public boolean onItemLongClick(AdapterView<?> parent, View v, int position, long id) {
-                /*data.deleteData(nameList.get(position), codeList.get(position));
-                Toast.makeText(getContext(), nameList.get(position) + " evaluation deleted. ", Toast.LENGTH_LONG).show();*/
-                // TODO Update value
+                data.deleteData(nameList.get(position), expenseList.get(position));
+                Toast.makeText(getContext(), nameList.get(position) + " evaluation deleted. ", Toast.LENGTH_LONG).show();
+                getMonthlyExpenses();
                 return true;
             }
         });
@@ -135,7 +122,7 @@ public class MonthlyExpensesFragment extends Fragment {
             text.setText("Monthly Expenses " + Double.toString(totalExpense));
         }
         else {
-            text.setText("Enter expenses");
+            text.setText("Enter monthly expenses");
         }
         cursor.close();
     }
