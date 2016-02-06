@@ -9,4 +9,17 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_introduction">IntroductionActivity</string>
+
+
+    <string name="title_activity_add_monthly">Enter your monthly expense</string>
+    <string name="prompt_name">Expense</string>
+    <string name="prompt_value">Monthly cost</string>
+    <string name="action_submit_monthly">Submit monthly expense</string>
+
+
+    <!-- Strings for error messages -->
+    <string name="error_field_required">This field is required</string>
+    <string name="error_mark">Enter a number between 0 - 100</string>
+    <string name="error_weight">Total weight exceeds 100 or invalid weight</string>
+
 </resources>
