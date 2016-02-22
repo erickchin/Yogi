@@ -15,7 +15,7 @@
     <string name="prompt_name">Expense</string>
     <string name="prompt_value">Monthly cost</string>
     <string name="action_submit_monthly">Submit monthly expense</string>
-    <string name="yogi">Yogi</string>
+
 
     <!-- Strings for error messages -->
     <string name="error_field_required">This field is required</string>
